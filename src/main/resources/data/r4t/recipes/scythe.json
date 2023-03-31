@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XXX",
+    "X N",
+    "  N"
+  ],
+  "key": {
+    "X": {
+      "item": "r4t:silver_ingot"
+    },
+    "N": {
+      "item": "minecraft:netherite_ingot"
+    }
+  },
+  "result": {
+    "item": "r4t:scythe"
+  }
+}
