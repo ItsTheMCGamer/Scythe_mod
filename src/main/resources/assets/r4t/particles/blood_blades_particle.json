@@ -1,15 +1,5 @@
 {
   "textures": [
-    "r4t:blood_blades_particle_0",
-    "r4t:blood_blades_particle_1",
-    "r4t:blood_blades_particle_2",
-    "r4t:blood_blades_particle_3",
-    "r4t:blood_blades_particle_4",
-    "r4t:blood_blades_particle_5",
-    "r4t:blood_blades_particle_6",
-    "r4t:blood_blades_particle_7",
-    "r4t:blood_blades_particle_8",
-    "r4t:blood_blades_particle_9",
-    "r4t:blood_blades_particle_10"
+    "r4t.blood_blades_particle"
   ]
 }
