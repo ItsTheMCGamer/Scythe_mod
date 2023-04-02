@@ -26,9 +26,9 @@ public class ScytheItemRenderer implements BuiltinItemRendererRegistry.DynamicIt
     private BakedModel inventoryScytheModel;
     private BakedModel worldScytheModel;
 
-    public ScytheItemRenderer(Identifier tridentId) {
-        this.id = new Identifier(tridentId.getNamespace(), tridentId.getPath() + "_renderer");
-        this.scytheId = tridentId;
+    public ScytheItemRenderer(Identifier scytheId) {
+        this.id = new Identifier("r4t", "scythe");
+        this.scytheId = scytheId;
     }
 
     @Override
@@ -49,10 +49,12 @@ public class ScytheItemRenderer implements BuiltinItemRendererRegistry.DynamicIt
                 "inventory"));
         this.worldScytheModel = client.getBakedModelManager().getModel(new ModelIdentifier(this.scytheId + "_handheld",
                 "inventory"));
+        System.out.println("Reloading scythe item renderer...");
     }
     @Override
     public void render(ItemStack stack, ModelTransformation.Mode mode, MatrixStack matrices, VertexConsumerProvider vertexConsumers,
                        int light, int overlay) {
+        System.out.println("Rendering scythe item...");
         matrices.pop();
         matrices.push();
         if(mode != ModelTransformation.Mode.FIRST_PERSON_LEFT_HAND && mode != ModelTransformation.Mode.FIRST_PERSON_RIGHT_HAND
@@ -61,7 +63,7 @@ public class ScytheItemRenderer implements BuiltinItemRendererRegistry.DynamicIt
         } else {
             boolean leftHanded;
             switch (mode) {
-                case FIRST_PERSON_LEFT_HAND, THIRD_PERSON_LEFT_HAND -> leftHanded =true;
+                case FIRST_PERSON_LEFT_HAND, THIRD_PERSON_LEFT_HAND -> leftHanded = true;
                 default -> leftHanded = true;
             }
             itemRenderer.renderItem(stack, mode, leftHanded, matrices, vertexConsumers, light, overlay, this.worldScytheModel);
