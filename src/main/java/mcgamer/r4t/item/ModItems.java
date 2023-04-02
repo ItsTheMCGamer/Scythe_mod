@@ -14,7 +14,7 @@ public class ModItems {
 	public static final Item SILVER_INGOT = registerItem("silver_ingot",
            new Item(new FabricItemSettings().group(ItemGroup.BUILDING_BLOCKS)));
     public static final Item SCYTHE = registerItem("scythe",
-            new SwordItem(ModToolMaterial.STEEL, 8, 0.5f,
+            new SwordItem(ModToolMaterial.STEEL, 4, -2.4f,
                     new FabricItemSettings().group(ItemGroup.COMBAT)));
 
 

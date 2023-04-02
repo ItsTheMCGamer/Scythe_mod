@@ -5,8 +5,10 @@ import net.fabricmc.api.Environment;
 import net.minecraft.client.particle.*;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.particle.DefaultParticleType;
+import org.jetbrains.annotations.Nullable;
 
 public class BloodBladesParticle extends SpriteBillboardParticle {
+
     protected BloodBladesParticle(ClientWorld level, double xCoord, double yCoord, double zCoord,
                                   SpriteProvider spriteSet, double xd, double yd, double zd) {
         super(level, xCoord, yCoord, zCoord, xd, yd, zd);
@@ -20,8 +22,8 @@ public class BloodBladesParticle extends SpriteBillboardParticle {
         this.setSpriteForAge(spriteSet);
 
         this.red = 1f;
-        this.blue = 1f;
         this.green = 1f;
+        this.blue = 1f;
     }
 
     @Override
@@ -39,17 +41,18 @@ public class BloodBladesParticle extends SpriteBillboardParticle {
         return ParticleTextureSheet.PARTICLE_SHEET_TRANSLUCENT;
     }
 
+
     @Environment(EnvType.CLIENT)
     public static class Factory implements ParticleFactory<DefaultParticleType> {
-        private final SpriteProvider sprites;
+         private final SpriteProvider sprites;
 
-        public Factory(SpriteProvider spriteSet) {
-            this.sprites = spriteSet;
-        }
+         public Factory(SpriteProvider spriteSet) {
+             this.sprites = spriteSet;
+         }
 
-        public Particle createParticle(DefaultParticleType particleType, ClientWorld level, double x, double y, double z,
-                                       double dx, double dy, double dz) {
-            return new BloodBladesParticle(level, x, y, z, this.sprites, dx, dy, dz);
-        }
-    }
+         public Particle createParticle(DefaultParticleType parameters, ClientWorld level, double x, double y, double z,
+                                        double dx, double dy, double dz) {
+             return new BloodBladesParticle(level, x, y, z, this.sprites, dx, dy, dz);
+         }
+     }
 }

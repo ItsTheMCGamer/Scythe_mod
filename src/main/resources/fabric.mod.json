@@ -15,6 +15,9 @@
 	"icon": "assets/r4t/icon.png",
 	"environment": "*",
 	"entrypoints": {
+		"client": [
+			"mcgamer.r4t.r4tClient"
+		],
 		"main": [
 			"mcgamer.r4t.r4t"
 		],

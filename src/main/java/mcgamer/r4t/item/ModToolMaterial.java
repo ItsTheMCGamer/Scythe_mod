@@ -11,7 +11,7 @@ import java.util.function.Supplier;
 
 public enum ModToolMaterial implements ToolMaterial {
 
-    STEEL(5, 2567, 10f, 5.0f, 20,
+    STEEL(5, 2567, 10f, 5.0f, 12,
             () -> Ingredient.ofItems(ModItems.SILVER_INGOT));
 
     private final int miningLevel;

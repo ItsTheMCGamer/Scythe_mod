@@ -15,10 +15,10 @@ import net.minecraft.util.registry.Registry;
 
 public class ModBlocks {
     public static final Block SILVER_BLOCK = registerBlock("silver_block",
-            new Block(FabricBlockSettings.of(Material.METAL).strength(4f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
+            new Block(FabricBlockSettings.of(Material.METAL).strength(11f).requiresTool()), ItemGroup.BUILDING_BLOCKS);
 
     public static final Block SILVER_ORE = registerBlock("silver_ore",
-            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(4f).requiresTool(),
+            new OreBlock(FabricBlockSettings.of(Material.STONE).strength(9f).requiresTool(),
                     UniformIntProvider.create(3, 7)), ItemGroup.BUILDING_BLOCKS);
     
 
